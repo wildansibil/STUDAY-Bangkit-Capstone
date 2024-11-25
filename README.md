@@ -1,1 +1,1 @@
-# STUDAY
+# STUDAY : Capstone Project
