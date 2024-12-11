@@ -27,6 +27,10 @@ Studay is and app to identifying a common challenge in early childhood education
 
 ## Tech Stack 
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/wildansibil/STUDAY-Bangkit-Capstone/main/GitHub%20assets/studay.png" alt="Gambar" width="500"/>
+</div>
+
 ## Project Architecture 
 
 ## Documentation 
