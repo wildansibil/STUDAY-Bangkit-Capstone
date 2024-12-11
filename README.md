@@ -2,11 +2,9 @@
 
 This is the source code for our bangkit capstone project STUDAY.
 
-#Team ID 
-###C242-PS569
-##Team Member 
+## Team ID : C242-PS569
 
-###Our Team
+## Our Team
 
 | Nama | Bangkit ID | Path |
 |:---:|:---|:---|
@@ -18,15 +16,17 @@ This is the source code for our bangkit capstone project STUDAY.
 | Muhammad Rizal Maulana | A284B4KY3053 | Mobile Development |
 
 
-#What Is STUDAY?
+## What Is STUDAY?
+
 Studay is and app to identifying a common challenge in early childhood education, the need for engaging tools to help children learn calistung (reading, writing, and arithmetic). With this application, we hope that we can reduce reducing the number of illiterates and those who cannot count in Indonesia.
 
-#Tech Stack 
+## Tech Stack 
 
-#Project Architecture 
+## Project Architecture 
 
-#Documentation 
-## [Machine Learning] 
+## Documentation 
+
+### [Machine Learning] 
 
 
 
