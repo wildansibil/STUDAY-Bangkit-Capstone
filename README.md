@@ -1,3 +1,4 @@
+![Gambar]("C:\Users\wilda\Downloads\studay.png")
 # STUDAY : Capstone Project
 
 This is the source code for our bangkit capstone project STUDAY.
@@ -26,7 +27,7 @@ Studay is and app to identifying a common challenge in early childhood education
 
 ## Documentation 
 
-### [Machine Learning] 
+### [Machine Learning](https://github.com/wildansibil/STUDAY-Bangkit-Capstone/tree/main/Machine%20Learning)
 
 
 
