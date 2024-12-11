@@ -28,7 +28,7 @@ For our bangkit capstone project, we made an app called Studay (Stuuday Day). St
 ## Tech Stack 
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/STUDAY-Bangkit-Capstone/blob/main/GitHub%20assets/tech%20stack.png" alt="Gambar" width="500"/>
+  <img src="https://raw.githubusercontent.com/wildansibil/STUDAY-Bangkit-Capstone/blob/main/GitHub%20assets/tech%20stack.png" alt="Gambar" width="500"/>
 </div>
 
 ## Project Architecture 
