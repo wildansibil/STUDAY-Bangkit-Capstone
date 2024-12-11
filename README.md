@@ -1,4 +1,7 @@
-![Gambar](https://raw.githubusercontent.com/wildansibil/STUDAY-Bangkit-Capstone/main/GitHub%20assets/studay.png)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/wildansibil/STUDAY-Bangkit-Capstone/main/GitHub%20assets/studay.png" alt="Gambar" width="500"/>
+</div>
+
 
 # STUDAY : Capstone Project
 
