@@ -1,4 +1,5 @@
-![Gambar]("https://github.com/wildansibil/STUDAY-Bangkit-Capstone/blob/main/GitHub%20assets/studay.png")
+![Gambar](https://raw.githubusercontent.com/wildansibil/STUDAY-Bangkit-Capstone/main/GitHub%20assets/studay.png)
+
 # STUDAY : Capstone Project
 
 This is the source code for our bangkit capstone project STUDAY.
