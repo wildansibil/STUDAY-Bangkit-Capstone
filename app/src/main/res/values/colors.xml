@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="teal">#388388</color>
+    <color name="cyan">#4ABFBD</color>
+    <color name="green">#8AB17D</color>
+    <color name="yellow">#E9C46A</color>
+    <color name="orange">#F4A261</color>
+    <color name="red">#E76F51</color>
+    <color name="ungu">#7237c5</color>
+    <color name="biru">#2d85de</color>
+    <color name="kuning">#f1dc1b</color>
+    <color name="merah">#fb565a</color>
+    <color name="hijau">#1cc4ab</color>
+    <color name="abu">#6E6C6C</color>
+</resources>
