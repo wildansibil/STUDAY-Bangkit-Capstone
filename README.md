@@ -26,7 +26,7 @@ This is the source code for our bangkit capstone project STUDAY.
 For our bangkit capstone project, we made an app called Studay (Stuuday Day). Studay is and app to identifying a common challenge in early childhood education, the need for engaging tools to help children learn calistung (reading, writing, and arithmetic). With this application, we hope that we can reduce reducing the number of illiterates and those who cannot count in Indonesia.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/wildansibil/STUDAY-Bangkit-Capstone/main/GitHub%20assets/studay.png" alt="Gambar" width="500"/>
+  <img src="https://raw.githubusercontent.com/wildansibil/STUDAY-Bangkit-Capstone/main/GitHub%20assets/uiuxstuday.png" alt="Gambar" width="500"/>
 </div>
 
 ## Tech Stack 
