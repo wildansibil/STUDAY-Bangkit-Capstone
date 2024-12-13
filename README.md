@@ -12,7 +12,7 @@ This is the source code for our bangkit capstone project STUDAY.
 ## Our Team
 
 | Nama | Bangkit ID | Path |
-|:---:|:---|:---|
+|:---:|:---:|:---:|
 | Wildan Sibil Danillah Safri | M180B4KY4485 | Machine Learning |
 | Faberian Diantama | M180B4KY1306 | Machine Learning |
 | Alamah Ulzanati Habibullah | M180B4KX0311 | Machine Learning |
