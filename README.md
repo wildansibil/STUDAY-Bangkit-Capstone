@@ -63,7 +63,9 @@ Data Storage and Sync
 
 ### [Machine Learning](https://github.com/wildansibil/STUDAY-Bangkit-Capstone/tree/main/Machine%20Learning)
 ### [Mobile Development](https://github.com/muzallana/studay)
-### [Cloud Computing](https://github.com/wildansibil/STUDAY-Bangkit-Capstone/tree/main/Backend)
+### [Cloud Computing (Server API)](https://github.com/SammyBangun/studay-api-server)
+### [Cloud Computing (TTS API)](https://github.com/SammyBangun/studay-api-tts)
+
 
 
 
