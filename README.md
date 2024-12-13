@@ -37,6 +37,7 @@ For our bangkit capstone project, we made an app called Studay (Stuuday Day). St
 
 ### [Machine Learning](https://github.com/wildansibil/STUDAY-Bangkit-Capstone/tree/main/Machine%20Learning)
 ### [Mobile Development](https://github.com/muzallana/studay)
+### [Cloud Computing](https://github.com/wildansibil/STUDAY-Bangkit-Capstone/tree/main/Backend)
 
 
 
