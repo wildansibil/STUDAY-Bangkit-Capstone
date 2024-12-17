@@ -99,17 +99,18 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
     // Convert the drawing to a ByteBuffer to pass into a model
     fun convertToByteBuffer(): ByteBuffer {
         val scaledBitmap = Bitmap.createScaledBitmap(canvasBitmap, 28, 28, true)
-        val byteBuffer = ByteBuffer.allocateDirect(4 * 28 * 28)
+        val byteBuffer = ByteBuffer.allocateDirect(4 * 28 * 28)  // 28x28 grayscale image (float32)
         byteBuffer.order(ByteOrder.nativeOrder())
+
         val pixels = IntArray(28 * 28)
         scaledBitmap.getPixels(pixels, 0, scaledBitmap.width, 0, 0, scaledBitmap.width, scaledBitmap.height)
 
         for (pixel in pixels) {
-            // Convert pixel to grayscale (normalized)
+            // Konversi pixel ke grayscale dan normalisasi
             val normalizedPixel = ((pixel shr 16 and 0xFF) * 0.299f +
                     (pixel shr 8 and 0xFF) * 0.587f +
                     (pixel and 0xFF) * 0.114f) / 255f
-            byteBuffer.putFloat(normalizedPixel)
+            byteBuffer.putFloat(normalizedPixel)  // Mengisi buffer dengan nilai float
         }
 
         return byteBuffer

@@ -94,7 +94,7 @@ class MenulisActivity : AppCompatActivity() {
 
     private fun getPredictedClass(output: ByteBuffer): String {
         output.rewind()
-        val probabilities = FloatArray(10) // Misalnya, model prediksi 10 kelas
+        val probabilities = FloatArray(37)  // Sesuaikan dengan jumlah kelas yang benar
         output.asFloatBuffer().get(probabilities)
 
         val maxIndex = probabilities.indices.maxByOrNull { probabilities[it] } ?: -1
