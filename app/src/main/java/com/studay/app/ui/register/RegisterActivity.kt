@@ -69,7 +69,7 @@ class RegisterActivity : AppCompatActivity() {
 
     // Function to handle user registration
     private fun registerUser(nama: String, email: String, password: String) {
-        val apiService = RetrofitClient.getInstance().create(ApiService::class.java)
+        val apiService = RetrofitClient.getInstance(context = this@RegisterActivity).create(ApiService::class.java)
         val user = User(nama, email, password)
         val call = apiService.registerUser(user)
 

@@ -13,8 +13,8 @@ interface StudayDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(user: UserEntity)
 
-    @Query("SELECT * FROM user_table WHERE id = :userId LIMIT 1")
-    suspend fun getUserById(userId: String): UserEntity?
+    @Query("SELECT * FROM user_table WHERE email = :email LIMIT 1")
+    suspend fun getUserByEmail(email: String): UserEntity?
 
     @Update
     suspend fun update(user: UserEntity)

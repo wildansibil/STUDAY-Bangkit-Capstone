@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
-                android:background="#00FFFFFF"
+                android:background="@color/cardview_shadow_end_color"
                 android:src="@drawable/ic_next"
                 app:layout_constraintBaseline_toBottomOf="parent"
                 app:layout_constraintBottom_toBottomOf="@+id/rvAbjad"

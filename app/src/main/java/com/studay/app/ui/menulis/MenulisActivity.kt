@@ -3,6 +3,7 @@ package com.studay.app
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +22,7 @@ class MenulisActivity : AppCompatActivity() {
     private lateinit var drawingView: DrawingView
     private lateinit var menulisHelper: MenulisHelper
     private lateinit var btnCek: Button
+    private lateinit var btnReset: ImageButton  // Tambahkan variabel untuk btnReset
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,7 @@ class MenulisActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
         drawingView = findViewById(R.id.drawingview)
         btnCek = findViewById(R.id.btnCek)
+        btnReset = findViewById(R.id.btnReset)  // Inisialisasi btnReset
 
         // Inisialisasi helper dan model
         menulisHelper = MenulisHelper(this)
@@ -45,17 +48,15 @@ class MenulisActivity : AppCompatActivity() {
 
         // Setup tombol cek untuk memulai inferensi
         btnCek.setOnClickListener {
-            // Tampilkan progress bar saat proses dimulai
             progressBar.visibility = View.VISIBLE
-
-            // Mengambil gambar yang digambar di drawing view
             val imageByteBuffer = drawingView.convertToByteBuffer()
-
-            // Menjalankan inferensi model TensorFlow Lite
             runInference(imageByteBuffer)
-
-            // Menyembunyikan progress bar setelah inferensi selesai
             progressBar.visibility = View.GONE
+        }
+
+        // Tambahkan listener untuk tombol reset
+        btnReset.setOnClickListener {
+            drawingView.resetDrawing()  // Memanggil fungsi reset pada DrawingView
         }
     }
 
@@ -65,13 +66,11 @@ class MenulisActivity : AppCompatActivity() {
 
     private fun loadHurufData() {
         progressBar.visibility = View.VISIBLE
-
         val hurufList = getHurufList()
         val randomHuruf = hurufList.random()
         rvAbjad.adapter = MenulisAdapter(listOf(randomHuruf)) { huruf ->
             Toast.makeText(this@MenulisActivity, "Huruf: ${huruf.huruf}", Toast.LENGTH_SHORT).show()
         }
-
         progressBar.visibility = View.GONE
     }
 
@@ -84,13 +83,11 @@ class MenulisActivity : AppCompatActivity() {
     }
 
     private fun setupDrawingView() {
+        // Anda bisa menambahkan konfigurasi tambahan untuk DrawingView jika diperlukan
     }
 
     private fun runInference(input: ByteBuffer) {
-        // Menjalankan inferensi menggunakan model
         val output = menulisHelper.runInference(input)
-
-        // Proses output dan tampilkan kelas prediksi
         val predictedClass = getPredictedClass(output)
         Toast.makeText(this, "Prediksi: $predictedClass", Toast.LENGTH_SHORT).show()
     }
@@ -100,7 +97,6 @@ class MenulisActivity : AppCompatActivity() {
         val probabilities = FloatArray(10) // Misalnya, model prediksi 10 kelas
         output.asFloatBuffer().get(probabilities)
 
-        // Ambil kelas dengan probabilitas tertinggi
         val maxIndex = probabilities.indices.maxByOrNull { probabilities[it] } ?: -1
         return if (maxIndex != -1) "Kelas: $maxIndex" else "Tidak dikenal"
     }

@@ -88,6 +88,14 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
         return true
     }
 
+    // Fungsi untuk mereset canvas (menghapus gambar yang telah digambar)
+    fun resetDrawing() {
+        drawPath.reset()  // Menghapus path yang sedang digambar
+        val canvas = Canvas(canvasBitmap)
+        canvas.drawColor(Color.WHITE)  // Menghapus gambar dengan mengganti background dengan putih
+        invalidate()  // Memperbarui tampilan
+    }
+
     // Convert the drawing to a ByteBuffer to pass into a model
     fun convertToByteBuffer(): ByteBuffer {
         val scaledBitmap = Bitmap.createScaledBitmap(canvasBitmap, 28, 28, true)

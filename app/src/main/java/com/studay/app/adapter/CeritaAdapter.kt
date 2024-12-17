@@ -22,20 +22,23 @@ class CeritaAdapter(
 
         fun bind(cerita: Cerita) {
             tvJudul.text = cerita.judul
-            tvDeskripsi.text = cerita.deskripsi
+
+            // Menampilkan deskripsi singkat
+            val shortDeskripsi = if (cerita.deskripsi.length > 100) {
+                "${cerita.deskripsi.substring(0, 100)}..."
+            } else {
+                cerita.deskripsi
+            }
+            tvDeskripsi.text = shortDeskripsi
 
             // Cek apakah gambar adalah URL atau resource ID
-            if (cerita.gambar is String && cerita.gambar.startsWith("http")) {
-                // Jika gambar adalah URL, gunakan Glide untuk memuat gambar
+            if (cerita.gambar.startsWith("http")) {
                 Glide.with(itemView.context)
                     .load(cerita.gambar) // URL gambar
                     .into(imageView)
             } else {
-                // Penanganan kasus ketika gambar bukan URL atau resource ID
                 imageView.setImageResource(R.drawable.ic_image) // Gambar default
             }
-
-
 
             itemView.setOnClickListener { onItemClick(cerita) }
         }

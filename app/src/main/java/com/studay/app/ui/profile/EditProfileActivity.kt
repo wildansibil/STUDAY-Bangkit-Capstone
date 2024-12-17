@@ -39,7 +39,7 @@ class EditProfileActivity : AppCompatActivity() {
 
         // Ambil data profil pengguna dari Room
         lifecycleScope.launch {
-            val user = userDao.getUserById(userId)
+            val user = userDao.getUserByEmail(userId)
             user?.let {
                 runOnUiThread {
                     nameInput.setText(it.name)
@@ -66,7 +66,7 @@ class EditProfileActivity : AppCompatActivity() {
 
             // Simpan perubahan profil ke Room
             lifecycleScope.launch {
-                val user = userDao.getUserById(userId)
+                val user = userDao.getUserByEmail(userId)
                 user?.let {
                     // Update user dengan data baru
                     val updatedUser = it.copy(name = newName, email = newEmail, password = newPassword)

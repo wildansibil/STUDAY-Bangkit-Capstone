@@ -58,11 +58,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
+                android:background="@color/cardview_shadow_end_color"
                 android:src="@drawable/ic_next"
                 app:layout_constraintBaseline_toBottomOf="parent"
                 app:layout_constraintBottom_toBottomOf="@+id/rvAngka"
-                app:layout_constraintEnd_toEndOf="@+id/rvAngka" />
-
+                app:layout_constraintEnd_toEndOf="@+id/rvAngka"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

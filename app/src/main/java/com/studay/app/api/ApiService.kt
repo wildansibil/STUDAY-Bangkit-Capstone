@@ -16,18 +16,6 @@ interface ApiService {
 
     @POST("login")
     fun loginUser(@Body credentials: LoginCredentials): Call<ApiResponse>
-
-    @GET("cerita")
-    fun getCerita(
-        @Header("Authorization") token: String
-    ): Call<List<Cerita>>
-
-    @GET("bahasa")
-    suspend fun getHuruf(): List<Huruf>
-
-    @GET("aljabar")
-    suspend fun getFormulas(): List<Angka>
-
 }
 
 data class LoginCredentials(val email: String, val password: String)

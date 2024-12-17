@@ -37,7 +37,7 @@ class ProfileFragment : Fragment() {
         val userId = "unique_user_id" // Ambil ID pengguna dari SharedPreferences atau token yang disimpan
 
         GlobalScope.launch {
-            val user = userDao.getUserById(userId)
+            val user = userDao.getUserByEmail(userId)
             user?.let {
                 // Update UI dengan data pengguna
                 binding.tvNama.text = it.name
@@ -49,7 +49,7 @@ class ProfileFragment : Fragment() {
         binding.btnLogout.setOnClickListener {
             // Hapus data pengguna di Room
             GlobalScope.launch {
-                val user = userDao.getUserById(userId)
+                val user = userDao.getUserByEmail(userId)
                 user?.let {
                     userDao.deleteUser(it)
                 }

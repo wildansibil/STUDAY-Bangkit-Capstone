@@ -1,7 +1,9 @@
 package com.studay.app
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +16,7 @@ class MembacaActivity : AppCompatActivity() {
 
     private lateinit var rvAbjad: RecyclerView
     private lateinit var progressBar: ProgressBar
+    private lateinit var btnNext: ImageButton // Tambahkan tombol next
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,14 +24,22 @@ class MembacaActivity : AppCompatActivity() {
 
         rvAbjad = findViewById(R.id.rvAbjad)
         progressBar = findViewById(R.id.loadingCerita)
+        btnNext = findViewById(R.id.btnNext) // Inisialisasi tombol Next
 
         setupRecyclerView()
         loadHurufData() // Memanggil fungsi untuk memuat data huruf manual
+
+        // Menambahkan event listener untuk tombol Next
+        btnNext.setOnClickListener {
+            // Arahkan ke MembacaActivity2 saat tombol Next ditekan
+            val intent = Intent(this, MembacaActivity2::class.java)
+            startActivity(intent)
+        }
     }
 
     // Fungsi untuk menyiapkan RecyclerView
     private fun setupRecyclerView() {
-        rvAbjad.layoutManager = GridLayoutManager(this, 4) // 2 kolom
+        rvAbjad.layoutManager = GridLayoutManager(this, 4) // 4 kolom
     }
 
     // Fungsi untuk memuat data huruf A-Z secara manual

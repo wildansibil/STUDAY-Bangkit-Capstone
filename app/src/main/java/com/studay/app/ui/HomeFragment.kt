@@ -26,19 +26,19 @@ class HomeFragment : Fragment() {
 
         // Set click listener for "Membaca" card
         binding.cvMembaca.setOnClickListener {
-            val intent = Intent(requireContext(), ActivityBridgeMembaca::class.java)
+            val intent = Intent(requireContext(), MembacaActivity::class.java)
             startActivity(intent)
         }
 
         // Set click listener for "Menulis" card
         binding.cvMenulis.setOnClickListener {
-            val intent = Intent(requireContext(), ActivityBridgeMenulis::class.java)
+            val intent = Intent(requireContext(), MenulisActivity::class.java)
             startActivity(intent)
         }
 
         // Set click listener for "Menghitung" card
         binding.cvMenghitung.setOnClickListener {
-            val intent = Intent(requireContext(), ActivityBridgeMenghitung::class.java)
+            val intent = Intent(requireContext(), MenghitungActivity::class.java)
             startActivity(intent)
         }
     }
